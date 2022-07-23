@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/main.js" defer></script>
+    <title>Basic Calculator</title>
+</head>
+<body>
+    <section id="calculator">
+        <div class="display">
+            <span class="inputs"></span>
+            <span class="results"></span>
+        </div>
+        <div class="button-container">
+            <button class="restart redish" onclick="restart()">A/C</button>
+            <button class="redish" onclick="deleteCharacter()">DEL</button>
+            <button class="operator" onclick="inputOperator('/')">/</button>
+            <button class="numbers" onclick="inputCharacter(7)">7</button>
+            <button class="numbers" onclick="inputCharacter(8)">8</button>
+            <button class="numbers" onclick="inputCharacter(9)">9</button>
+            <button class="operator" onclick="inputOperator('*')">*</button>
+            <button class="numbers" onclick="inputCharacter(4)">4</button>
+            <button class="numbers" onclick="inputCharacter(5)">5</button>
+            <button class="numbers" onclick="inputCharacter(6)">6</button>
+            <button class="operator" onclick="inputOperator('-')">-</button>
+            <button class="numbers" onclick="inputCharacter(1)">1</button>
+            <button class="numbers" onclick="inputCharacter(2)">2</button>
+            <button class="numbers" onclick="inputCharacter(3)">3</button>
+            <button class="operator" onclick="inputOperator('+')">+</button>
+            <button class="numbers zero" onclick="inputCharacter(0)">0</button>
+            <button class="numbers" onclick="inputCharacter('.')">.</button>
+            <button class="operator" onclick="getResults('=')">=</button>
+        </div>
+    </section>
+</body>
+</html>

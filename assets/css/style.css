@@ -1,0 +1,69 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+#calculator {
+    width: 400px;
+    height: 85vh;
+    padding: 40px 15px 20px;
+    background-color: #383939;
+    margin: 13px auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.display {
+    background-color: #c0c0c0;
+    margin-bottom: 20px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.display .inputs {
+    font-size: 18px;
+}
+.display .results {
+    font-size: 36px;
+    font-weight: 900;
+    color: #000000;
+    text-align: right;
+    font-family: sans-serif;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    flex-grow: 1;
+}
+.button-container button {
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #726d6d;
+}
+.button-container button:active {
+    background: #cccccc;
+}
+.button-container button.zero, .button-container button.restart {
+    grid-column: span 2;
+}
+.button-container button.redish {
+    background-color: #d02a2a;
+}
+.button-container button.redish:active {
+    background-color: #ff0000;
+}
+.button-container button.operator {
+    background-color: #109494;
+}
+.button-container button.operator:active {
+    background-color: #35ebeb;
+}
