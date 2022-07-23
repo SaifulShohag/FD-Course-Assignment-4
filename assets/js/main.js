@@ -3,6 +3,7 @@ const displayResults = document.querySelector('.display .results');
 let answer;
 let operator;
 let operatorPosition;
+let dotAdded = false;
 
 const addition = (a, b) => a + b;
 const substraction = (a, b) => a - b;
@@ -32,10 +33,19 @@ function deleteCharacter() {
         operatorPosition = undefined;
     }
 }
+function inputDot(opr) {
+    if(displayInputs.textContent.slice(-1) === '.' || dotAdded) {
+        alert('Invalid input!');
+    } else {
+        dotAdded = true;
+        inputCharacter(opr);
+    }
+}
 
 function inputOperator(opr) {
+    dotAdded = false;
     if(((displayInputs.textContent.length === 0 && opr !== '-') || displayInputs.textContent === '-')
-    && answer === undefined) {
+    && answer === undefined || displayInputs.textContent.slice(-1) === '.') {
         alert('Invalid input!');
     } else if(displayInputs.textContent.length !== 0 && operator !== undefined && answer === undefined) {
         alert("Sorry, You can't enter more than 2 values and 1 operator.")
@@ -83,6 +93,7 @@ function implementOperation(a, b) {
 }
 
 function getResults() {
+    dotAdded = false;
     if(displayInputs.textContent.length === 0 || displayInputs.textContent.length === (operatorPosition+1) ||
     (displayInputs.textContent.length === 1 && displayInputs.textContent[0] === '-')) {
         alert("Please enter a valid arithmetic!")
