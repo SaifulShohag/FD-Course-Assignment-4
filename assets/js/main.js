@@ -31,6 +31,9 @@ function deleteCharacter() {
     if(displayInputs.textContent.length === operatorPosition) {
         operator = undefined;
         operatorPosition = undefined;
+        if(displayInputs.textContent.indexOf('.') !== -1) {
+            dotAdded = true;
+        }
     }
 }
 function inputDot(opr) {
